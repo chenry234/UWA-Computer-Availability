@@ -1,5 +1,18 @@
 $(document).ready( function(){
 
+  //setting the accordion to be collapsible
+  $( "#accordion" ).accordion({
+    collapsible: true
+  });
+  //setting the accordion to be collapsed when it starts
+  $( "#accordion" ).accordion({
+    active: false
+  });
+  //setting the icons
+  $( "#accordion" ).accordion({ icons: { "header": "ui-icon-triangle-1-e", 
+    "activeHeader": "ui-icon-triangle-1-s" } 
+  });
+  
   $.get( "libWebsite.html", function( data ) {
     // Append the entire page into ID=content
     $( "#content" ).html( data );
@@ -34,17 +47,6 @@ $(document).ready( function(){
   // Hiding the main page
   $("#content").hide();
 
-  //setting the accordion to be collapsible
-  $( "#accordion" ).accordion({
-    collapsible: true
-  });
-  //setting the accordion to be collapsed when it starts
-  $( "#accordion" ).accordion({
-    active: false
-  });
-  //setting the icons
-  $( "#accordion" ).accordion({ icons: { "header": "ui-icon-triangle-1-e", 
-    "activeHeader": "ui-icon-triangle-1-s" } 
-  });
+
   
 });  
